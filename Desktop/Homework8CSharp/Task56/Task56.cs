@@ -39,7 +39,7 @@ void PrintMatrix(int[,] matrix)
 
 int FindMinimalRow(int[,] matrix)
 {
-    int minSum = 1000000;
+    int minSum = 100000;
     int Sum = 0;
     int minIndex = 1;
     for (int i = 0; i < matrix.GetLength(0); i++)
@@ -49,11 +49,11 @@ int FindMinimalRow(int[,] matrix)
             Sum += matrix[i,j];
         }
         if (Sum < minSum)
-        {
+        {  
             minSum = Sum;
             minIndex = i+1;
         }
         Sum = 0;
-    }
-    return minIndex;
+     }
+     return minIndex;
 }
